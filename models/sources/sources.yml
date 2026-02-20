@@ -1,0 +1,9 @@
+sources:
+  # source schema name (best practice), but we can give any name to our sources
+  - name: staging
+    database: airbnb
+    schema: staging
+    tables:
+      - name: listings
+      - name: bookings
+      - name: hosts
