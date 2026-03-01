@@ -1,0 +1,4 @@
+raw_status,normalized_status,is_active
+confirmed,CONFIRMED,true
+cancelled,CANCELLED,false
+pending,PENDING,false

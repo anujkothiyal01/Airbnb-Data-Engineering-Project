@@ -1,8 +1,0 @@
-sources:
-  - name: staging
-    database: internal_training
-    schema: training_anuj
-    tables:
-      - name: listings
-      - name: bookings
-      - name: hosts
