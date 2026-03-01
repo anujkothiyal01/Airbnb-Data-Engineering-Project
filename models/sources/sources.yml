@@ -1,8 +1,7 @@
 sources:
-  # source schema name (best practice), but we can give any name to our sources
   - name: staging
-    database: airbnb
-    schema: staging
+    database: internal_training
+    schema: training_anuj
     tables:
       - name: listings
       - name: bookings
