@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: fact_bookings
+    description: "One row per booking with revenue and booking metrics"
+    columns:
+      - name: booking_id
+        tests:
+          - not_null
+          - unique
+
+      - name: listing_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_listing')
+              field: listing_id
+
+      - name: host_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_host')
+              field: host_id
+
+      - name: total_revenue
+        tests:
+          - not_null
+
+  - name: dim_host
+    description: "Host dimension with historical attributes"
+    columns:
+      - name: host_id
+        tests:
+          - not_null
+
+  - name: dim_listing
+    description: "Listing dimension for property attributes"
+    columns:
+      - name: listing_id
+        tests:
+          - not_null
